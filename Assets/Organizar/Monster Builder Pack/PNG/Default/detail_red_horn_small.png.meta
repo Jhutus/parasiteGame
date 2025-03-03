@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      detail_red_horn_small_0: 8267150839671942778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

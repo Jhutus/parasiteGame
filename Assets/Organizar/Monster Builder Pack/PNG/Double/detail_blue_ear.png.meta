@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      detail_blue_ear_0: -7549840568360464713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

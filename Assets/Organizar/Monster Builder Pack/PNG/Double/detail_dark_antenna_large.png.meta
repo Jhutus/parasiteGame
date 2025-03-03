@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      detail_dark_antenna_large_0: 3412456092767894833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

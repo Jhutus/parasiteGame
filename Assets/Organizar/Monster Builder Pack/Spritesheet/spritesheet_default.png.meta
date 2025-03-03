@@ -1298,7 +1298,53 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spritesheet_default_0: 7814752275714677441
+      spritesheet_default_1: 6920992211604364072
+      spritesheet_default_10: 8170798025230534844
+      spritesheet_default_11: 2593743623052729465
+      spritesheet_default_12: -6760883905233668708
+      spritesheet_default_13: -8358185576869512034
+      spritesheet_default_14: -537158546513418281
+      spritesheet_default_15: 7899271584169562100
+      spritesheet_default_16: 5725407912479050125
+      spritesheet_default_17: -5832522660752377908
+      spritesheet_default_18: 2481084204971982344
+      spritesheet_default_19: -9003799321488806020
+      spritesheet_default_2: -4740915770850827944
+      spritesheet_default_20: -2492125361009974894
+      spritesheet_default_21: -7791477421285957324
+      spritesheet_default_22: 4884829787658739679
+      spritesheet_default_23: 2120637544823580857
+      spritesheet_default_24: -2601116869553585422
+      spritesheet_default_25: 6448876214575228946
+      spritesheet_default_26: 4404497143597259503
+      spritesheet_default_27: 241754334083296054
+      spritesheet_default_28: 8237493572959063896
+      spritesheet_default_29: 5543189271314906873
+      spritesheet_default_3: 5564033804792488463
+      spritesheet_default_30: 8641167947924126256
+      spritesheet_default_31: 5970641702988476032
+      spritesheet_default_32: 5535763506625180697
+      spritesheet_default_33: -5194727174585971038
+      spritesheet_default_34: 4770475400985477701
+      spritesheet_default_35: -427438534385962493
+      spritesheet_default_36: -6564682533675616219
+      spritesheet_default_37: -2337995952557372575
+      spritesheet_default_38: 4697035385535839680
+      spritesheet_default_39: 5766977606222783047
+      spritesheet_default_4: -3307288631444210258
+      spritesheet_default_40: -1421747675012922134
+      spritesheet_default_41: -3864307492100795534
+      spritesheet_default_42: 8811034354198503092
+      spritesheet_default_43: -1650944053193088944
+      spritesheet_default_44: -2884420523991296293
+      spritesheet_default_45: 7726236740651850000
+      spritesheet_default_5: 5069725386070517938
+      spritesheet_default_6: -4211962826239868023
+      spritesheet_default_7: -2331698532662055577
+      spritesheet_default_8: -6654251643608154267
+      spritesheet_default_9: -8366988449928606121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

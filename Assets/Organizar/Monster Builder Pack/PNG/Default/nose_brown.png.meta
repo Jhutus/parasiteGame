@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nose_brown_0: 53740307695106910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

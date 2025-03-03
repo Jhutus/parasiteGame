@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      detail_blue_horn_large_0: -2246595836081953708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

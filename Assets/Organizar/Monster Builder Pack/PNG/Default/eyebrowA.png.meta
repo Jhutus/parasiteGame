@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      eyebrowA_0: 4619860733333846107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

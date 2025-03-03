@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      detail_yellow_antenna_large_0: 8367069838621574681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
