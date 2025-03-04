@@ -52,17 +52,17 @@ public class MainPanel : MonoBehaviour
         enterButton.interactable = false;
     }
 
-    private void PlayClickSound()
+    public void PlayClickSound()
+{
+    if (audioSource != null && clickSound != null)
     {
-        if (audioSource != null && clickSound != null)
-        {
-            audioSource.PlayOneShot(clickSound);
-        }
-        else
-        {
-            Debug.LogError("AudioSource o AudioClip de clic no están asignados.");
-        }
+        audioSource.PlayOneShot(clickSound);
     }
+    else
+    {
+        Debug.LogError("AudioSource o AudioClip de clic no están asignados.");
+    }
+}
 
     private void PlayButtonClicked()
     {
