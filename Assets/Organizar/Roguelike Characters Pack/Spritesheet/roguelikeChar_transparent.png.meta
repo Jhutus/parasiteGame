@@ -5479,7 +5479,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_192
+      name: Enemy1
       rect:
         serializedVersion: 2
         x: 0
@@ -5501,7 +5501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_193
+      name: Enemy5
       rect:
         serializedVersion: 2
         x: 17
@@ -6271,7 +6271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_228
+      name: Enemy2
       rect:
         serializedVersion: 2
         x: 0
@@ -6293,7 +6293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_229
+      name: Enemy6
       rect:
         serializedVersion: 2
         x: 17
@@ -7063,7 +7063,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_264
+      name: Enemy3
       rect:
         serializedVersion: 2
         x: 0
@@ -7085,7 +7085,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_265
+      name: Enemy7
       rect:
         serializedVersion: 2
         x: 17
@@ -7965,7 +7965,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_305
+      name: Enemy4
       rect:
         serializedVersion: 2
         x: 0
@@ -7987,13 +7987,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_306
+      name: Enemy8
       rect:
         serializedVersion: 2
         x: 17
         y: 51
         width: 16
-        height: 14
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8735,7 +8735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_340
+      name: Enemy9
       rect:
         serializedVersion: 2
         x: 0
@@ -8757,13 +8757,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_341
+      name: Enemy10
       rect:
         serializedVersion: 2
         x: 17
         y: 34
         width: 16
-        height: 14
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9285,7 +9285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_365
+      name: Enemy11
       rect:
         serializedVersion: 2
         x: 0
@@ -9307,13 +9307,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_366
+      name: Enemy12
       rect:
         serializedVersion: 2
         x: 17
         y: 17
         width: 16
-        height: 14
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9351,7 +9351,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_368
+      name: Enemy13
       rect:
         serializedVersion: 2
         x: 0
@@ -9373,7 +9373,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeChar_transparent_369
+      name: Enemy14
       rect:
         serializedVersion: 2
         x: 17
@@ -11102,6 +11102,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Enemy1: -6528668969445462710
+      Enemy10: -2114881745607548358
+      Enemy11: 1388645407300595436
+      Enemy12: 6489220211478588827
+      Enemy13: -420130793609038498
+      Enemy14: 3111011499897958475
+      Enemy2: -4214063815785635560
+      Enemy3: 8202212567172606008
+      Enemy4: -6970582237362891044
+      Enemy5: 1021969343768294325
+      Enemy6: 4107933918213426446
+      Enemy7: 1456911508468862982
+      Enemy8: -2306650038087202531
+      Enemy9: 1103672260952943225
       roguelikeChar_transparent_0: 7117352459926733294
       roguelikeChar_transparent_1: -4594815229075491804
       roguelikeChar_transparent_10: -6969585839208715986
@@ -11206,8 +11220,6 @@ TextureImporter:
       roguelikeChar_transparent_19: 6272190499121955713
       roguelikeChar_transparent_190: -5071917328319467127
       roguelikeChar_transparent_191: 8872412693658788796
-      roguelikeChar_transparent_192: -6528668969445462710
-      roguelikeChar_transparent_193: 1021969343768294325
       roguelikeChar_transparent_194: 6342123147299320549
       roguelikeChar_transparent_195: -3297586043866034983
       roguelikeChar_transparent_196: 1543063555165018590
@@ -11246,8 +11258,6 @@ TextureImporter:
       roguelikeChar_transparent_225: 3044380539662898845
       roguelikeChar_transparent_226: 6824697557880252895
       roguelikeChar_transparent_227: 3968494168455937035
-      roguelikeChar_transparent_228: -4214063815785635560
-      roguelikeChar_transparent_229: 4107933918213426446
       roguelikeChar_transparent_23: 8809339333625427106
       roguelikeChar_transparent_230: -6167098606044524478
       roguelikeChar_transparent_231: 3087799594967610528
@@ -11286,8 +11296,6 @@ TextureImporter:
       roguelikeChar_transparent_261: 1186380599168581584
       roguelikeChar_transparent_262: 199877480396007499
       roguelikeChar_transparent_263: 5573106414223372956
-      roguelikeChar_transparent_264: 8202212567172606008
-      roguelikeChar_transparent_265: 1456911508468862982
       roguelikeChar_transparent_266: 8607161724259369658
       roguelikeChar_transparent_267: 1453783750128131227
       roguelikeChar_transparent_268: 7231580280658546036
@@ -11332,8 +11340,6 @@ TextureImporter:
       roguelikeChar_transparent_302: 7787023001015827380
       roguelikeChar_transparent_303: -8951004919316864209
       roguelikeChar_transparent_304: 2095172583409747781
-      roguelikeChar_transparent_305: -6970582237362891044
-      roguelikeChar_transparent_306: -2306650038087202531
       roguelikeChar_transparent_307: -2134295144962696747
       roguelikeChar_transparent_308: -4712945396077307768
       roguelikeChar_transparent_309: -2961060862285417737
@@ -11371,8 +11377,6 @@ TextureImporter:
       roguelikeChar_transparent_338: 8773401652699675183
       roguelikeChar_transparent_339: -4602922484429383530
       roguelikeChar_transparent_34: 7499433305485123129
-      roguelikeChar_transparent_340: 1103672260952943225
-      roguelikeChar_transparent_341: -2114881745607548358
       roguelikeChar_transparent_342: -519826939983022136
       roguelikeChar_transparent_343: 4351290164274876012
       roguelikeChar_transparent_344: -3066589044650139065
@@ -11398,11 +11402,7 @@ TextureImporter:
       roguelikeChar_transparent_362: -5441204933515362814
       roguelikeChar_transparent_363: -5433713859659384450
       roguelikeChar_transparent_364: -4495320620738510251
-      roguelikeChar_transparent_365: 1388645407300595436
-      roguelikeChar_transparent_366: 6489220211478588827
       roguelikeChar_transparent_367: 3990455378766444005
-      roguelikeChar_transparent_368: -420130793609038498
-      roguelikeChar_transparent_369: 3111011499897958475
       roguelikeChar_transparent_37: 2728650231278730744
       roguelikeChar_transparent_370: -509475210952471328
       roguelikeChar_transparent_371: 7305450831679087157
