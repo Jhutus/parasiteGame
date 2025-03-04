@@ -152,10 +152,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2102439224}
     - target: {fileID: 4748682351655856859, guid: da16680d6da76ec439e62d6e0953d8d0, type: 3}
-      propertyPath: spriteIconPrefab
-      value: 
-      objectReference: {fileID: 5154623184586793279, guid: b5199476c1c37b544b2125a9aefd7a17, type: 3}
-    - target: {fileID: 4748682351655856859, guid: da16680d6da76ec439e62d6e0953d8d0, type: 3}
       propertyPath: spriteHistoryPanel
       value: 
       objectReference: {fileID: 2102439228}
@@ -578,10 +574,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPursuit
       objectReference: {fileID: 0}
-    - target: {fileID: 5042590068862649285, guid: d4879369071b8124697e7b7567e2823c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6970582237362891044, guid: 43cb7867be916ab4a993e3a5bdf683b9, type: 3}
     - target: {fileID: 8404171236010863617, guid: d4879369071b8124697e7b7567e2823c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1920.4181
