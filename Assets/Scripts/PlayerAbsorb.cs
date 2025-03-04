@@ -11,9 +11,15 @@ public class PlayerAbsorb : MonoBehaviour
     private bool canAbsorb = true; // Controla si puede absorber
     private List<Sprite> absorbedSprites = new List<Sprite>(); // Lista de sprites absorbidos
 
-    private float absorbDuration = 5f; // Tiempo que mantiene el sprite absorbido
-    private float cooldownTime = 2f; // Tiempo antes de poder absorber de nuevo
+    public float absorbDuration = 10f; // Tiempo que mantiene el sprite absorbido
+    public float hurryDuration = 5f; // Tiempo que queda de absorcion
+    public float cooldownTime = 2f; // Tiempo antes de poder absorber de nuevo
 
+
+    public GameObject greenCircle;  // Apto para absorber
+    public GameObject blueCircle;   // En absorción
+    public GameObject orangeCircle; // 5 segundos restantes
+    public GameObject redCircle;    // Cooldown
     //UI
     public GameObject spriteHistoryPanel; // Panel donde se mostrarán los sprites absorbidos
     public GameObject spriteIconPrefab; // Prefab de un icono en la UI
@@ -24,6 +30,7 @@ public class PlayerAbsorb : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>(); // Obtiene el SpriteRenderer del jugador
         originalSprite = playerSprite.sprite; // Guarda el sprite inicial
         cooldownText.text = "";
+        UpdateStateIndicator("ready");
     }
 
     void Update()
@@ -52,6 +59,7 @@ public class PlayerAbsorb : MonoBehaviour
 
                 enemy.ChangeSprite(); // Cambia el sprite del enemigo
                 canAbsorb = false; // Desactiva la capacidad de absorber temporalmente
+                enemy.tag = "Sick"; // Cambia el tag 
 
                 // Actualiza la UI con los sprites absorbidos
                 UpdateSpriteHistoryUI();
@@ -64,13 +72,18 @@ public class PlayerAbsorb : MonoBehaviour
 
     IEnumerator ResetSpriteAfterTime()
     {
-        cooldownText.text = "Absorción activa";
-        yield return new WaitForSeconds(absorbDuration); // Espera 10 segundos
+        UpdateStateIndicator("absorbing"); // 🔵 Estado azul
+        yield return new WaitForSeconds(absorbDuration - hurryDuration);
+
+        UpdateStateIndicator("warning"); // 🟠 Estado naranja (Tiempo restante)
+        yield return new WaitForSeconds(hurryDuration);
+
         playerSprite.sprite = originalSprite; // Vuelve al sprite original
-        cooldownText.text = "Cooldown...";
-        yield return new WaitForSeconds(cooldownTime); // Espera 5 segundos antes de poder absorber de nuevo
-        cooldownText.text = "";
+        UpdateStateIndicator("cooldown"); // 🔴 Estado rojo
+        yield return new WaitForSeconds(cooldownTime); // Espera 2 segundos antes de poder absorber de nuevo
+
         canAbsorb = true; // Habilita la absorción nuevamente
+        UpdateStateIndicator("ready"); // 🟢 Estado verde
     }
 
     public void ChangeSprite(int index)
@@ -109,5 +122,13 @@ public class PlayerAbsorb : MonoBehaviour
                 textComponent.text = (i + 1).ToString();
             }
         }
+    }
+    // 📌 **Método para actualizar los círculos de estado**
+    void UpdateStateIndicator(string state)
+    {
+        greenCircle.SetActive(state == "ready");      // 🟢 Listo para absorber
+        blueCircle.SetActive(state == "absorbing");   // 🔵 Absorbiendo
+        orangeCircle.SetActive(state == "warning");   // 🟠 5 segundos restantes
+        redCircle.SetActive(state == "cooldown");     // 🔴 Cooldown
     }
 }
