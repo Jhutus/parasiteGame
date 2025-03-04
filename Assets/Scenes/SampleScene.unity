@@ -549,6 +549,7 @@ GameObject:
   - component: {fileID: 840303306}
   - component: {fileID: 840303305}
   - component: {fileID: 840303307}
+  - component: {fileID: 840303308}
   m_Layer: 0
   m_Name: Enemy5
   m_TagString: Enemy
@@ -712,6 +713,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSprite: {fileID: 3422004762469392329, guid: 43cb7867be916ab4a993e3a5bdf683b9, type: 3}
+--- !u!114 &840303308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840303302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e65167416baa64fa54ea90f6ab9e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 195794651}
+  fleeSpeed: 1
+  detectionRadius: 3
 --- !u!1 &1143783154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,8 +1328,6 @@ GameObject:
   - component: {fileID: 1915380270}
   - component: {fileID: 1915380269}
   - component: {fileID: 1915380271}
-  - component: {fileID: 1915380273}
-  - component: {fileID: 1915380272}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Enemy
@@ -1477,42 +1491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSprite: {fileID: 3422004762469392329, guid: 43cb7867be916ab4a993e3a5bdf683b9, type: 3}
---- !u!114 &1915380272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915380266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb95ecbb484ec1246a4270f9d73546e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  objective: {fileID: 195794651}
---- !u!195 &1915380273
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915380266}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.42
-  m_Speed: 2.96
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.54
-  m_BaseOffset: 0.23
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &2140581167
 GameObject:
   m_ObjectHideFlags: 0
