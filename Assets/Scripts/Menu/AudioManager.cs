@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip sampleSceneMusic;
     public AudioClip buttonClickSFX;
 
+    private bool isMuted = false; // Estado de mute
+
     private void Awake()
     {
         if (Instance == null)
@@ -30,8 +32,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        // Determinar qué música debe sonar según la escena actual
         PlayMusicForScene();
+        LoadMuteState(); // Cargar estado de mute guardado
     }
 
     public void PlayMusicForScene()
@@ -48,7 +50,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayButtonClick()
     {
-        sfxSource.PlayOneShot(buttonClickSFX);
+        if (!isMuted)
+            sfxSource.PlayOneShot(buttonClickSFX);
     }
 
     public void SetMusicVolume(float volume)
@@ -62,5 +65,25 @@ public class AudioManager : MonoBehaviour
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("SFXVolume", volume);
     }
-}
 
+    public void ToggleMute()
+    {
+        isMuted = !isMuted;
+        float volume = isMuted ? -80f : 0f; // -80dB silencia el audio en AudioMixer
+
+        audioMixer.SetFloat("MusicVolume", volume);
+        audioMixer.SetFloat("SFXVolume", volume);
+
+        PlayerPrefs.SetInt("Muted", isMuted ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadMuteState()
+    {
+        isMuted = PlayerPrefs.GetInt("Muted", 0) == 1;
+        float volume = isMuted ? -80f : 0f;
+
+        audioMixer.SetFloat("MusicVolume", volume);
+        audioMixer.SetFloat("SFXVolume", volume);
+    }
+}
