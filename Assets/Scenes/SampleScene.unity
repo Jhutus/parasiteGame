@@ -4279,10 +4279,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2102439224}
     - target: {fileID: 4748682351655856859, guid: da16680d6da76ec439e62d6e0953d8d0, type: 3}
-      propertyPath: spriteIconPrefab
-      value: 
-      objectReference: {fileID: 5154623184586793279, guid: b5199476c1c37b544b2125a9aefd7a17, type: 3}
-    - target: {fileID: 4748682351655856859, guid: da16680d6da76ec439e62d6e0953d8d0, type: 3}
       propertyPath: spriteHistoryPanel
       value: 
       objectReference: {fileID: 2102439228}
@@ -8157,6 +8153,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8232,7 +8229,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -11.14, y: -1.67, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8250,6 +8247,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!61 &522950371
 BoxCollider2D:
+--- !u!114 &519420033
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10116,6 +10115,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.24, y: 0.36}
   m_EdgeRadius: 0
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6903a739d79b55d41bff3b53a73f9f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 265264837}
+  offset: {x: 0, y: 0, z: -10}
+  smoothSpeed: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -33445,10 +33453,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPursuit
       objectReference: {fileID: 0}
-    - target: {fileID: 5042590068862649285, guid: d4879369071b8124697e7b7567e2823c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6970582237362891044, guid: 43cb7867be916ab4a993e3a5bdf683b9, type: 3}
     - target: {fileID: 8404171236010863617, guid: d4879369071b8124697e7b7567e2823c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1920.4181
@@ -39341,6 +39345,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6333062426654521566, guid: b2826f3b20c82a241ac7c876fbf25718, type: 3}
       propertyPath: m_SortingOrder
+    - target: {fileID: 3595999935894464618, guid: b2826f3b20c82a241ac7c876fbf25718, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595999935894464618, guid: b2826f3b20c82a241ac7c876fbf25718, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
