@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 429876823949084694, guid: f33f6e72525947b409028c1e53b9cb68, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4115965346874361364, guid: f33f6e72525947b409028c1e53b9cb68, type: 3}
       propertyPath: m_Name
       value: EnemyPursuit
@@ -58,14 +62,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4115965346874361364, guid: f33f6e72525947b409028c1e53b9cb68, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 829068894227502467}
+      addedObject: {fileID: 4818360467915045052}
   m_SourcePrefab: {fileID: 100100000, guid: f33f6e72525947b409028c1e53b9cb68, type: 3}
 --- !u!1 &204158427291530872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4115965346874361364, guid: f33f6e72525947b409028c1e53b9cb68, type: 3}
   m_PrefabInstance: {fileID: 4308688852968452204}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &829068894227502467
+--- !u!114 &4818360467915045052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
