@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class GameSceneManager : MonoBehaviour
 {
+    public GameObject winPanel;
     public GameObject gameOverPanel;
     public GameObject pauseButton;
+
     void Start()
     {
         if (GameManager.Instance == null)
@@ -47,6 +49,12 @@ public class GameSceneManager : MonoBehaviour
         {
             // Activa el panel solo si el estado es GameOver
             gameOverPanel.SetActive(newState == GameManager.GameState.GameOver);
+
+        }
+        if (winPanel != null)
+        {
+            // Activa el panel solo si el estado es Win
+            winPanel.SetActive(newState == GameManager.GameState.Win);
 
         }
         if (pauseButton != null)

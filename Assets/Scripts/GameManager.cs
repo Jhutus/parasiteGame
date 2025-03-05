@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public enum GameState { MainMenu, Playing, Paused, GameOver }
+    public enum GameState { MainMenu, Playing, Paused, GameOver, Win }
     public GameState CurrentState { get; private set; }
      public static event Action<GameState> OnGameStateChanged; // Evento
 
@@ -53,5 +53,11 @@ public class GameManager : MonoBehaviour
     {   
         Time.timeScale = 0f;
         ChangeState(GameState.GameOver);
+    }
+
+    public void WinGame()
+    {   
+        Time.timeScale = 0f;
+        ChangeState(GameState.Win);
     }
 }
