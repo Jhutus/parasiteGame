@@ -43,6 +43,11 @@ public class GameSceneManager : MonoBehaviour
         GameManager.Instance.StartGame();
     }
 
+    public void GameOver()
+    {
+        GameManager.Instance.GameOver();
+    }
+
     void HandleGameStateChanged(GameManager.GameState newState)
     {
         if (gameOverPanel != null)
