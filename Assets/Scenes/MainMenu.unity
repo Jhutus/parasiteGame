@@ -4062,6 +4062,8 @@ MonoBehaviour:
   enterButton: {fileID: 1304068705}
   backButtonPlay: {fileID: 1235439883}
   backButtonOptions: {fileID: 932935015}
+  restartButton: {fileID: 0}
+  returnButton: {fileID: 0}
   level1Button: {fileID: 480824879}
   level2Button: {fileID: 971162088}
   audioSource: {fileID: 1877181212}
@@ -5383,7 +5385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1809041833
 RectTransform:
   m_ObjectHideFlags: 0

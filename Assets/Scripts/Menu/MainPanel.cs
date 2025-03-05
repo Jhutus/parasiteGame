@@ -14,7 +14,7 @@ public class MainPanel : MonoBehaviour
     [Header("Panels")]
     public GameObject mainPanel;
     public GameObject optionPanel;
-    public GameObject playPanel;  // Panel de play
+    public GameObject playPanel;  
     public GameObject levelSelectPanel;
     public GameObject exitPanel;
 
@@ -23,8 +23,10 @@ public class MainPanel : MonoBehaviour
     public Button optionsButton;
     public Button exitButton;
     public Button enterButton;
-    public Button backButtonPlay;  // BackButton en el panel de play
-    public Button backButtonOptions;  // BackButton en el panel de opciones
+    public Button backButtonPlay;  
+    public Button backButtonOptions;  
+    public Button restartButton;  // Nuevo botón para reiniciar
+    public Button returnButton;   // Nuevo botón para volver al MainPanel
 
     [Header("Level Buttons")]
     public Button level1Button;
@@ -41,28 +43,36 @@ public class MainPanel : MonoBehaviour
         optionsButton.onClick.AddListener(() => OptionsButtonClicked());
         exitButton.onClick.AddListener(() => ExitButtonClicked());
         enterButton.onClick.AddListener(() => EnterButtonClicked());
-        backButtonPlay.onClick.AddListener(() => BackButtonClickedFromPlay()); // BackButton desde el panel de Play
-        backButtonOptions.onClick.AddListener(() => BackButtonClickedFromOptions()); // BackButton desde el panel de Opciones
-
-        // Asignar eventos de los botones de niveles
+        backButtonPlay.onClick.AddListener(() => BackButtonClickedFromPlay()); 
+        backButtonOptions.onClick.AddListener(() => BackButtonClickedFromOptions()); 
         level1Button.onClick.AddListener(() => LoadLevel(1));
         level2Button.onClick.AddListener(() => LoadLevel(2));
 
-        // Habilitar el botón Ingresar inicialmente
+        // Asignar eventos de los nuevos botones
+        if (restartButton != null) restartButton.onClick.AddListener(() => RestartGame());
+        if (returnButton != null) returnButton.onClick.AddListener(() => ReturnToMainPanel());
+        if (exitButton != null) exitButton.onClick.AddListener(() => ExitGame());
+
         enterButton.interactable = false;
+
+        // Asignar evento de mute
+        mute.onValueChanged.AddListener(ToggleMute);
+        
+        // Cargar estado de mute guardado
+        LoadMuteState();
     }
 
     public void PlayClickSound()
-{
-    if (audioSource != null && clickSound != null)
     {
-        audioSource.PlayOneShot(clickSound);
+        if (audioSource != null && clickSound != null)
+        {
+            audioSource.PlayOneShot(clickSound);
+        }
+        else
+        {
+            Debug.LogError("AudioSource o AudioClip de clic no están asignados.");
+        }
     }
-    else
-    {
-        Debug.LogError("AudioSource o AudioClip de clic no están asignados.");
-    }
-}
 
     private void PlayButtonClicked()
     {
@@ -79,41 +89,41 @@ public class MainPanel : MonoBehaviour
     private void ExitButtonClicked()
     {
         PlayClickSound();
-        OpenExitPanel(); // Mostrar panel de confirmación de salida
+        OpenExitPanel();
     }
 
     private void EnterButtonClicked()
     {
         PlayClickSound();
-        OpenPanel(mainPanel); // Regresar al panel principal
+        OpenPanel(mainPanel);
     }
 
     private void BackButtonClickedFromPlay()
     {
         PlayClickSound();
-        OpenPanel(mainPanel); // Regresar al panel principal desde el panel de Play
+        OpenPanel(mainPanel);
     }
 
     private void BackButtonClickedFromOptions()
     {
         PlayClickSound();
-        OpenPanel(mainPanel); // Regresar al panel principal desde el panel de Opciones
+        OpenPanel(mainPanel);
     }
 
     private void OpenExitPanel()
     {
         mainPanel.SetActive(false);
-        exitPanel.SetActive(true); // Mostrar el panel de salida
-        enterButton.interactable = true; // Habilitar el botón Ingresar
+        exitPanel.SetActive(true);
+        enterButton.interactable = true;
     }
 
     public void OpenPanel(GameObject panel)
     {
         mainPanel.SetActive(false);
         optionPanel.SetActive(false);
-        playPanel.SetActive(false); // Asegurarse de ocultar el panel de Play
+        playPanel.SetActive(false);
         levelSelectPanel.SetActive(false);
-        exitPanel.SetActive(false); // Asegurarse de ocultar el panel de salida
+        exitPanel.SetActive(false);
 
         panel.SetActive(true);
     }
@@ -141,7 +151,16 @@ public class MainPanel : MonoBehaviour
         if (audioMixer != null)
         {
             audioMixer.SetFloat("VolMaster", isMuted ? -80f : Mathf.Log10(master.value) * 20);
+            PlayerPrefs.SetInt("Muted", isMuted ? 1 : 0);
+            PlayerPrefs.Save();
         }
+    }
+
+    private void LoadMuteState()
+    {
+        bool isMuted = PlayerPrefs.GetInt("Muted", 0) == 1;
+        mute.isOn = isMuted; // Actualiza el estado del Toggle en la UI
+        ToggleMute(isMuted); // Aplica el mute al AudioMixer
     }
 
     public void LoadLevel(int levelIndex)
@@ -150,8 +169,24 @@ public class MainPanel : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
-    public void Exit()
+    // Función para reiniciar el juego en SampleScene
+    public void RestartGame()
     {
+        PlayClickSound();
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    // Función para volver al MainPanel
+    public void ReturnToMainPanel()
+    {
+        PlayClickSound();
+        OpenPanel(mainPanel);
+    }
+
+    // Función para salir del juego
+    public void ExitGame()
+    {
+        PlayClickSound();
         Debug.Log("Saliendo del Juego");
         Application.Quit();
     }
