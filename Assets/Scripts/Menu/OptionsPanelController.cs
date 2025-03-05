@@ -19,7 +19,7 @@ public class OptionsPanelController : MonoBehaviour
         if (optionsPanelInstance == null)
         {
             // Busca un Canvas en la escena para ser padre del panel
-            Canvas canvas = FindObjectOfType<Canvas>();
+            Canvas canvas = FindFirstObjectByType<Canvas>();
             if (canvas != null)
             {
                 // Instancia el prefab y lo establece como hijo del Canvas
