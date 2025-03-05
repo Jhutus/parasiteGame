@@ -37284,17 +37284,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1783134821}
     m_Modifications:
-    - target: {fileID: -5111546062613333418, guid: d4879369071b8124697e7b7567e2823c, type: 3}
-      propertyPath: hitSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 972e631b4df5dbc4d93af2c8a8df8d33, type: 3}
     - target: {fileID: 204158427291530872, guid: d4879369071b8124697e7b7567e2823c, type: 3}
       propertyPath: m_Name
       value: EnemyPursuit
-      objectReference: {fileID: 0}
-    - target: {fileID: 5975688403220995269, guid: d4879369071b8124697e7b7567e2823c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8404171236010863617, guid: d4879369071b8124697e7b7567e2823c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59351,10 +59343,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1783134821}
     m_Modifications:
-    - target: {fileID: 639483803147539246, guid: 7bb8ab92687bff349a940fe84ecd4361, type: 3}
-      propertyPath: hitSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 972e631b4df5dbc4d93af2c8a8df8d33, type: 3}
     - target: {fileID: 2548009730460917148, guid: 7bb8ab92687bff349a940fe84ecd4361, type: 3}
       propertyPath: m_Name
       value: EnemyFlee
