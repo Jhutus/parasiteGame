@@ -138,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1347194132068462577}
-  - component: {fileID: 2507088421471939989}
+  - component: {fileID: 7079197772191187705}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -163,7 +163,7 @@ Transform:
   - {fileID: 5518162825165764499}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2507088421471939989
+--- !u!114 &7079197772191187705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,15 +172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1252550607231022814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe572db5fbce8643a51ad3a1726b1fe, type: 3}
+  m_Script: {fileID: 11500000, guid: bd123e5796ef188438bcde814ff6b1e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 7892398111267241008}
-  sfxSource: {fileID: 6315982985485600561}
   audioMixer: {fileID: 24100000, guid: 4b3758fb4d948934c87a76bf42f6c21f, type: 2}
-  mainMenuMusic: {fileID: 8300000, guid: 00a982344f799294a8c12d9e290b9707, type: 3}
-  sampleSceneMusic: {fileID: 8300000, guid: 414f68ef420358342b9528a7416a79d8, type: 3}
-  buttonClickSFX: {fileID: 8300000, guid: 8755fe8966d7c0a48827dc84c460d7e5, type: 3}
 --- !u!1 &1578323627169128851
 GameObject:
   m_ObjectHideFlags: 0
